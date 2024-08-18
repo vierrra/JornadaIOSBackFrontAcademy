@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E4900A6BB0E8DEADFCE2D7D /* Pods_PrimeiroAppMVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E20273E297E86D636F8A3D78 /* Pods_PrimeiroAppMVVM.framework */; };
 		6C32B9582C6BCB1D00AF26F5 /* StoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C32B9572C6BCB1D00AF26F5 /* StoryCollectionViewCell.swift */; };
 		6C32B95B2C6BEBC600AF26F5 /* StoryCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C32B95A2C6BEBC600AF26F5 /* StoryCollectionViewModel.swift */; };
 		6C32B95E2C6D152300AF26F5 /* PostCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C32B95D2C6D152300AF26F5 /* PostCardCollectionViewCell.swift */; };
@@ -32,6 +33,7 @@
 		CCD6E4752C726FF900FB81F3 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD6E4742C726FF900FB81F3 /* LoginScreen.swift */; };
 		CCD6E4782C72880B00FB81F3 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD6E4772C72880B00FB81F3 /* LoginViewModel.swift */; };
 		CCD6E47A2C728CD600FB81F3 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD6E4792C728CD600FB81F3 /* BaseViewController.swift */; };
+		CCD6E47C2C72B51800FB81F3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CCD6E47B2C72B51800FB81F3 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D2BB52A329E80F25F0BF35F /* Pods-PrimeiroAppMVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrimeiroAppMVVM.debug.xcconfig"; path = "Target Support Files/Pods-PrimeiroAppMVVM/Pods-PrimeiroAppMVVM.debug.xcconfig"; sourceTree = "<group>"; };
 		6C32B9572C6BCB1D00AF26F5 /* StoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		6C32B95A2C6BEBC600AF26F5 /* StoryCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCollectionViewModel.swift; sourceTree = "<group>"; };
 		6C32B95D2C6D152300AF26F5 /* PostCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCardCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -77,10 +80,13 @@
 		6CDE27082C653C7B00092607 /* StoryCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCardCollectionViewCell.swift; sourceTree = "<group>"; };
 		6CDE270B2C6547F600092607 /* StoryCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCardViewModel.swift; sourceTree = "<group>"; };
 		6CDE27102C65536600092607 /* Stories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stories.swift; sourceTree = "<group>"; };
+		AF119DB07239F673E05723EF /* Pods-PrimeiroAppMVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrimeiroAppMVVM.release.xcconfig"; path = "Target Support Files/Pods-PrimeiroAppMVVM/Pods-PrimeiroAppMVVM.release.xcconfig"; sourceTree = "<group>"; };
 		CCD6E4722C726FD900FB81F3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CCD6E4742C726FF900FB81F3 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		CCD6E4772C72880B00FB81F3 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		CCD6E4792C728CD600FB81F3 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		CCD6E47B2C72B51800FB81F3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E20273E297E86D636F8A3D78 /* Pods_PrimeiroAppMVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrimeiroAppMVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E4900A6BB0E8DEADFCE2D7D /* Pods_PrimeiroAppMVVM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +115,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09C1818BFECE2858EC0A3489 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E20273E297E86D636F8A3D78 /* Pods_PrimeiroAppMVVM.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6C32B9562C6BCAEC00AF26F5 /* StoryCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +172,8 @@
 				6CDE26E12C6507C300092607 /* PrimeiroAppMVVMTests */,
 				6CDE26EB2C6507C300092607 /* PrimeiroAppMVVMUITests */,
 				6CDE26C92C6507BB00092607 /* Products */,
+				8FE0CB2B1F7F8ADFA5CEEEE1 /* Pods */,
+				09C1818BFECE2858EC0A3489 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -180,6 +197,7 @@
 				6CDE26CB2C6507BB00092607 /* AppDelegate.swift */,
 				6CDE26CD2C6507BB00092607 /* SceneDelegate.swift */,
 				6CDE26D42C6507C300092607 /* Assets.xcassets */,
+				CCD6E47B2C72B51800FB81F3 /* GoogleService-Info.plist */,
 				6CDE26D62C6507C300092607 /* LaunchScreen.storyboard */,
 				6CDE26D92C6507C300092607 /* Info.plist */,
 			);
@@ -277,6 +295,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		8FE0CB2B1F7F8ADFA5CEEEE1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1D2BB52A329E80F25F0BF35F /* Pods-PrimeiroAppMVVM.debug.xcconfig */,
+				AF119DB07239F673E05723EF /* Pods-PrimeiroAppMVVM.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		CCD6E4702C726F8400FB81F3 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -310,9 +337,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6CDE26F22C6507C300092607 /* Build configuration list for PBXNativeTarget "PrimeiroAppMVVM" */;
 			buildPhases = (
+				BFB5EC2B8C778B04E7857116 /* [CP] Check Pods Manifest.lock */,
 				6CDE26C42C6507BB00092607 /* Sources */,
 				6CDE26C52C6507BB00092607 /* Frameworks */,
 				6CDE26C62C6507BB00092607 /* Resources */,
+				7737214B3A28ED3A5B0C1B67 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -409,6 +438,7 @@
 			files = (
 				6CDE26D52C6507C300092607 /* Assets.xcassets in Resources */,
 				6CDE26D82C6507C300092607 /* Base in Resources */,
+				CCD6E47C2C72B51800FB81F3 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +457,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7737214B3A28ED3A5B0C1B67 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PrimeiroAppMVVM/Pods-PrimeiroAppMVVM-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PrimeiroAppMVVM/Pods-PrimeiroAppMVVM-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PrimeiroAppMVVM/Pods-PrimeiroAppMVVM-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BFB5EC2B8C778B04E7857116 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PrimeiroAppMVVM-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6CDE26C42C6507BB00092607 /* Sources */ = {
@@ -621,12 +693,14 @@
 		};
 		6CDE26F32C6507C300092607 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D2BB52A329E80F25F0BF35F /* Pods-PrimeiroAppMVVM.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J89XP6WQS5;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PrimeiroAppMVVM/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -649,12 +723,14 @@
 		};
 		6CDE26F42C6507C300092607 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF119DB07239F673E05723EF /* Pods-PrimeiroAppMVVM.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J89XP6WQS5;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PrimeiroAppMVVM/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
