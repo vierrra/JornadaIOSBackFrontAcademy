@@ -39,4 +39,12 @@ class LoginViewModel {
             return false
         }
     }
+    
+    public func validationsFiledsTextFields(_ email: String, _ password: String) -> Bool {
+        if isValidEmail(email) && isValidPassword(password) {
+            return true
+        } else {
+            return false
+        }
+    }
 }

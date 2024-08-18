@@ -40,8 +40,8 @@ extension LoginViewController: UITextFieldDelegate {
         if let text = textField.text as? NSString {
           let newText = text.replacingCharacters(in: range, with: string)
           textField.text = newText
-            if let viewModel = viewModel {
-                if viewModel.isValidEmail(screen?.emailTextField.text ?? "") && viewModel.isValidPassword(screen?.passwordTextField.text ?? "") {
+            if let viewModel = viewModel, let screen = screen {
+                if viewModel.validationsFiledsTextFields(screen.emailTextField.text ?? "", screen.passwordTextField.text ?? "") {
                     isEnabledLoginButton(isEnable: true)
               } else {
                     isEnabledLoginButton(isEnable: false)
@@ -50,7 +50,6 @@ extension LoginViewController: UITextFieldDelegate {
         }
         return false
     }
-    
 }
 
 extension LoginViewController: LoginScreenProtocol {
