@@ -43,6 +43,7 @@ class LoginScreen: UIView {
         textField.layer.borderColor = UIColor.lightGray.cgColor
         textField.layer.borderWidth = 1
         textField.keyboardType = .emailAddress
+        //textField.isSecureTextEntry = true
         return textField
     }()
     
@@ -120,6 +121,6 @@ class LoginScreen: UIView {
         registerButton.anchor(top: passwordTextField.bottomAnchor, padding: UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0), size: CGSize(width: 0, height: 40))
         registerButton.xAnchor(xAnchor: centerXAnchor)
         
-        loginButton.anchor(leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: UIEdgeInsets(top: 0, left: 40, bottom: 150, right: 40), size: CGSize(width: 0, height: 40))
+        loginButton.anchor(leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: UIEdgeInsets(top: 0, left: 20, bottom: 150, right: 20), size: CGSize(width: 0, height: 40))
     }
 }
