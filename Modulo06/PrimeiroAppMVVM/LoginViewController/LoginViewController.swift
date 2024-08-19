@@ -55,8 +55,9 @@ extension LoginViewController: UITextFieldDelegate {
 
 extension LoginViewController: LoginScreenProtocol {
     func tappedRegisterButton() {
-        guard let screen = screen, let viewModel = viewModel else { return }
-        viewModel.registerUser(screen.emailTextField.text ?? "", screen.passwordTextField.text ?? "")
+        let vc = RegisterViewController()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
         print("Chegou Register")
     }
     
@@ -76,14 +77,6 @@ extension LoginViewController: LoginViewModelProtocol {
     }
     
     func errorLogin(_ errorMessage: String) {
-        confirmAlert(title: "Warning", message: errorMessage, titleButton: "Ok")
-    }
-    
-    func sucessRegister() {
-        dismiss(animated: true)
-    }
-    
-    func errorRegister(_ errorMessage: String) {
         confirmAlert(title: "Warning", message: errorMessage, titleButton: "Ok")
     }
 }

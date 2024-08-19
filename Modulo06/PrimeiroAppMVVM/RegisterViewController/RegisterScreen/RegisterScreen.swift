@@ -1,5 +1,5 @@
 //
-//  LoginScreen.swift
+//  RegisterScreen.swift
 //  PrimeiroAppMVVM
 //
 //  Created by Renato Vieira on 18/08/24.
@@ -7,20 +7,20 @@
 
 import UIKit
 
-protocol LoginScreenProtocol: AnyObject {
+protocol RegisterScreenProtocol: AnyObject {
     func tappedRegisterButton()
-    func tappedLoginButton()
+    func tappedBackButton()
 }
 
-class LoginScreen: UIView {
+class RegisterScreen: UIView {
     
-    weak var delegate: LoginScreenProtocol?
+    private weak var delegate: RegisterScreenProtocol?
     
-    lazy var welcomeLabel: UILabel = {
+    lazy var createRegisterLabel: UILabel = {
         let label = UILabel()
         label.textColor = .black
         label.font = UIFont.boldSystemFont(ofSize: 28)
-        label.text = "Seja bem vindo!"
+        label.text = "Crie sua conta!"
         return label
     }()
     
@@ -47,12 +47,24 @@ class LoginScreen: UIView {
         return textField
     }()
     
+    lazy var confirmPasswordTextField: UITextField = {
+        let textField = UITextField()
+        textField.placeholder = "Confirme sua senha:"
+        textField.layer.cornerRadius = 8
+        textField.borderStyle = .roundedRect
+        textField.layer.borderColor = UIColor.lightGray.cgColor
+        textField.layer.borderWidth = 1
+        textField.keyboardType = .emailAddress
+        textField.isSecureTextEntry = true
+        return textField
+    }()
+    
     lazy var registerButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Não tem conta? Cadastra-se", for: .normal)
+        button.setTitle("Cadastrar", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 14)
-        button.setTitleColor(.systemBlue, for: .normal)
-        button.backgroundColor = .white
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = .systemBlue
         button.clipsToBounds = true
         button.layer.cornerRadius = 8
         button.addTarget(self, action: #selector(tappedRegisterButton), for: .touchUpInside)
@@ -60,25 +72,25 @@ class LoginScreen: UIView {
     }()
     
     @objc func tappedRegisterButton() {
-        self.delegate?.tappedRegisterButton()
+        delegate?.tappedRegisterButton()
     }
     
-    lazy var loginButton: UIButton = {
+    lazy var backButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Login", for: .normal)
+        button.setTitle("Voltar", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 14)
         button.setTitleColor(.white, for: .normal)
         button.backgroundColor = .systemBlue
         button.clipsToBounds = true
         button.layer.cornerRadius = 8
-        button.addTarget(self, action: #selector(tappedLoginButton), for: .touchUpInside)
+        button.addTarget(self, action: #selector(tappedBackButton), for: .touchUpInside)
         return button
     }()
     
-    @objc func tappedLoginButton() {
-        self.delegate?.tappedLoginButton()
+    @objc func tappedBackButton() {
+        self.delegate?.tappedBackButton()
     }
-    
+
     init() {
         super.init(frame: .zero)
         backgroundColor =  .white
@@ -90,9 +102,11 @@ class LoginScreen: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public func configDelegateProtocolTextFileds(_ delegate: UITextFieldDelegate) {
-        emailTextField.delegate = delegate
-        passwordTextField.delegate = delegate
+    public func configProtocols(_ delegate: RegisterScreenProtocol, _ delegateTextFields: UITextFieldDelegate) {
+        self.delegate = delegate
+        self.emailTextField.delegate = delegateTextFields
+        self.passwordTextField.delegate = delegateTextFields
+        self.confirmPasswordTextField.delegate = delegateTextFields
     }
     
     private func setup() {
@@ -101,26 +115,30 @@ class LoginScreen: UIView {
     }
     
     private func buildViewHierarchy() {
-        addSubview(welcomeLabel)
+        addSubview(createRegisterLabel)
         addSubview(emailTextField)
         addSubview(passwordTextField)
+        addSubview(confirmPasswordTextField)
         addSubview(registerButton)
-        addSubview(loginButton)
+        addSubview(backButton)
     }
     
     private func configContraints() {
-        welcomeLabel.anchor(top: safeAreaLayoutGuide.topAnchor, padding: UIEdgeInsets(top: 50, left: 0, bottom: 0, right: 0))
-        welcomeLabel.xAnchor(xAnchor: centerXAnchor)
+        createRegisterLabel.anchor(top: safeAreaLayoutGuide.topAnchor, padding: UIEdgeInsets(top: 50, left: 0, bottom: 0, right: 0))
+        createRegisterLabel.xAnchor(xAnchor: centerXAnchor)
         
-        emailTextField.anchor(top: welcomeLabel.bottomAnchor, leading: leadingAnchor, trailing: trailingAnchor, padding: UIEdgeInsets(top: 80, left: 20, bottom: 0, right: 20))
+        emailTextField.anchor(top: createRegisterLabel.bottomAnchor, leading: leadingAnchor, trailing: trailingAnchor, padding: UIEdgeInsets(top: 80, left: 20, bottom: 0, right: 20))
         emailTextField.size(size: CGSize(width: 0, height: 40))
         
         passwordTextField.anchor(top: emailTextField.bottomAnchor, leading: leadingAnchor, trailing: trailingAnchor, padding: UIEdgeInsets(top: 20, left: 20, bottom: 0, right: 20))
         passwordTextField.size(size: CGSize(width: 0, height: 40))
         
-        registerButton.anchor(top: passwordTextField.bottomAnchor, padding: UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0), size: CGSize(width: 0, height: 40))
-        registerButton.xAnchor(xAnchor: centerXAnchor)
+        confirmPasswordTextField.anchor(top: passwordTextField.bottomAnchor, leading: leadingAnchor, trailing: trailingAnchor, padding: UIEdgeInsets(top: 20, left: 20, bottom: 0, right: 20))
+        confirmPasswordTextField.size(size: CGSize(width: 0, height: 40))
         
-        loginButton.anchor(leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: UIEdgeInsets(top: 0, left: 20, bottom: 150, right: 20), size: CGSize(width: 0, height: 40))
+        registerButton.anchor(top: confirmPasswordTextField.bottomAnchor, leading: leadingAnchor, trailing: trailingAnchor, padding: UIEdgeInsets(top: 60, left: 20, bottom: 0, right: 20), size: CGSize(width: 0, height: 40))
+        
+        backButton.anchor(top: registerButton.bottomAnchor, leading: leadingAnchor, trailing: trailingAnchor, padding: UIEdgeInsets(top: 20, left: 20, bottom: 0, right: 20), size: CGSize(width: 0, height: 40))
+       
     }
 }

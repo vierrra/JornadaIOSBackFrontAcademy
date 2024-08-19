@@ -5,14 +5,12 @@
 //  Created by Renato Vieira on 18/08/24.
 //
 
-import UIKit
+import Foundation
 import FirebaseAuth
 
 protocol LoginViewModelProtocol: AnyObject {
     func sucessLogin()
     func errorLogin(_ errorMessage: String)
-    func sucessRegister()
-    func errorRegister(_ errorMessage: String)
 }
 
 class LoginViewModel {
@@ -36,14 +34,6 @@ class LoginViewModel {
         return passwordPred.evaluate(with: password)
     }
     
-    public func validateEqualsPassword(_ password: UITextField, _ confirmPasswordTextField: UITextField ) -> Bool {
-        if password.text == confirmPasswordTextField.text {
-            return true
-        } else {
-            return false
-        }
-    }
-    
     public func login(_ email: String, _ password: String) {
         auth.signIn(withEmail: email, password: password) { [weak self] authResult, error in
             if error == nil {
@@ -52,18 +42,6 @@ class LoginViewModel {
             } else {
                 print("Erro no login, error: \(String(describing: error?.localizedDescription))")
                 self?.delegate?.errorLogin((String(describing: error?.localizedDescription)))
-            }
-        }
-    }
-    
-    public func registerUser(_ email: String, _ password: String) {
-        auth.createUser(withEmail: email, password: password) { [weak self] authResult, error in
-            if error == nil {
-                print("Sucesso no cadastro")
-                self?.delegate?.sucessRegister()
-            } else {
-                print("Erro no cadastro, error: \(String(describing: error?.localizedDescription))")
-                self?.delegate?.errorRegister((String(describing: error?.localizedDescription)))
             }
         }
     }

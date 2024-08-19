@@ -36,6 +36,15 @@ class BaseViewController: UIViewController {
     alertController.addAction(okButton)
     present(alertController, animated: true)
   }
-
-
+    
+    func showAlertWithCompletion(_ title: String, _ message: String, titleButton: String, completion: @escaping () -> Void) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okButton = UIAlertAction(title: titleButton, style: .default) { _ in
+            self.dismiss(animated: true)
+        }
+        
+        alertController.addAction(okButton)
+        present(alertController, animated: true)
+    }
+    
 }

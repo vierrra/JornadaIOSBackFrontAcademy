@@ -34,6 +34,9 @@
 		CCD6E4782C72880B00FB81F3 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD6E4772C72880B00FB81F3 /* LoginViewModel.swift */; };
 		CCD6E47A2C728CD600FB81F3 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD6E4792C728CD600FB81F3 /* BaseViewController.swift */; };
 		CCD6E47C2C72B51800FB81F3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CCD6E47B2C72B51800FB81F3 /* GoogleService-Info.plist */; };
+		CCD6E47F2C72DB3C00FB81F3 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD6E47E2C72DB3C00FB81F3 /* RegisterViewController.swift */; };
+		CCD6E4822C72DB6E00FB81F3 /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD6E4812C72DB6E00FB81F3 /* RegisterScreen.swift */; };
+		CCD6E4852C72E21300FB81F3 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD6E4842C72E21300FB81F3 /* RegisterViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +89,9 @@
 		CCD6E4772C72880B00FB81F3 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		CCD6E4792C728CD600FB81F3 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		CCD6E47B2C72B51800FB81F3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CCD6E47E2C72DB3C00FB81F3 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		CCD6E4812C72DB6E00FB81F3 /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
+		CCD6E4842C72E21300FB81F3 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		E20273E297E86D636F8A3D78 /* Pods_PrimeiroAppMVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrimeiroAppMVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -193,6 +199,7 @@
 				6CDE270F2C65534100092607 /* Model */,
 				6CDE26FF2C650CE400092607 /* Util */,
 				CCD6E4702C726F8400FB81F3 /* LoginViewController */,
+				CCD6E47D2C72DB1000FB81F3 /* RegisterViewController */,
 				6CDE26FB2C650A9B00092607 /* HomeViewController */,
 				6CDE26CB2C6507BB00092607 /* AppDelegate.swift */,
 				6CDE26CD2C6507BB00092607 /* SceneDelegate.swift */,
@@ -326,6 +333,32 @@
 			isa = PBXGroup;
 			children = (
 				CCD6E4772C72880B00FB81F3 /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CCD6E47D2C72DB1000FB81F3 /* RegisterViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CCD6E4832C72E1EC00FB81F3 /* ViewModel */,
+				CCD6E4802C72DB5200FB81F3 /* RegisterScreen */,
+				CCD6E47E2C72DB3C00FB81F3 /* RegisterViewController.swift */,
+			);
+			path = RegisterViewController;
+			sourceTree = "<group>";
+		};
+		CCD6E4802C72DB5200FB81F3 /* RegisterScreen */ = {
+			isa = PBXGroup;
+			children = (
+				CCD6E4812C72DB6E00FB81F3 /* RegisterScreen.swift */,
+			);
+			path = RegisterScreen;
+			sourceTree = "<group>";
+		};
+		CCD6E4832C72E1EC00FB81F3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CCD6E4842C72E21300FB81F3 /* RegisterViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -514,6 +547,7 @@
 				6C32B9582C6BCB1D00AF26F5 /* StoryCollectionViewCell.swift in Sources */,
 				6CDE270C2C6547F600092607 /* StoryCardViewModel.swift in Sources */,
 				6CDE27112C65536600092607 /* Stories.swift in Sources */,
+				CCD6E47F2C72DB3C00FB81F3 /* RegisterViewController.swift in Sources */,
 				6CDE27092C653C7B00092607 /* StoryCardCollectionViewCell.swift in Sources */,
 				6CDE27052C65318A00092607 /* HomeViewModel.swift in Sources */,
 				6CDE26CC2C6507BB00092607 /* AppDelegate.swift in Sources */,
@@ -522,9 +556,11 @@
 				6CDE27012C650D0700092607 /* UIViewLayoutExtension.swift in Sources */,
 				CCD6E4732C726FD900FB81F3 /* LoginViewController.swift in Sources */,
 				6CDE27032C650EB500092607 /* UIColorExtension.swift in Sources */,
+				CCD6E4822C72DB6E00FB81F3 /* RegisterScreen.swift in Sources */,
 				6C32B9632C6D200000AF26F5 /* PostCardViewModel.swift in Sources */,
 				CCD6E4782C72880B00FB81F3 /* LoginViewModel.swift in Sources */,
 				6C32B95E2C6D152300AF26F5 /* PostCardCollectionViewCell.swift in Sources */,
+				CCD6E4852C72E21300FB81F3 /* RegisterViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
