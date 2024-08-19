@@ -9,8 +9,8 @@ import UIKit
 
 class LoginViewController: BaseViewController {
     
-    var screen: LoginScreen?
-    var viewModel: LoginViewModel? = LoginViewModel()
+    private var screen: LoginScreen?
+    private var viewModel: LoginViewModel? = LoginViewModel()
     
     override func loadView() {
         screen = LoginScreen()
@@ -27,6 +27,7 @@ class LoginViewController: BaseViewController {
     private func configProtocols() {
         screen?.configDelegateProtocolTextFileds(self)
         screen?.delegate = self
+        viewModel?.delegate(self)
     }
     
     private  func isEnabledLoginButton(isEnable: Bool) {
@@ -54,15 +55,35 @@ extension LoginViewController: UITextFieldDelegate {
 
 extension LoginViewController: LoginScreenProtocol {
     func tappedRegisterButton() {
+        guard let screen = screen, let viewModel = viewModel else { return }
+        viewModel.registerUser(screen.emailTextField.text ?? "", screen.passwordTextField.text ?? "")
         print("Chegou Register")
     }
     
     func tappedLoginButton() {
         guard let screen = screen, let viewModel = viewModel else { return }
-        if viewModel.getEmailAndPassword(screen.emailTextField.text ?? "", screen.passwordTextField.text ?? "") {
-            confirmAlert(title: "Parabéns", message: "Login efetuado com sucesso", titleButton: "Prosseguir")
-        } else {
-            confirmAlert(title: "Usuario ou senha incorretos", message: "Tente novamente", titleButton: "Prosseguir")
-        }
+        
+        viewModel.login(screen.emailTextField.text ?? "", screen.passwordTextField.text ?? "")
+    }
+}
+
+extension LoginViewController: LoginViewModelProtocol {
+    
+    func sucessLogin() {
+        let vc = HomeViewController()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
+    }
+    
+    func errorLogin(_ errorMessage: String) {
+        confirmAlert(title: "Warning", message: errorMessage, titleButton: "Ok")
+    }
+    
+    func sucessRegister() {
+        dismiss(animated: true)
+    }
+    
+    func errorRegister(_ errorMessage: String) {
+        confirmAlert(title: "Warning", message: errorMessage, titleButton: "Ok")
     }
 }

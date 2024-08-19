@@ -192,7 +192,7 @@
 			children = (
 				6CDE270F2C65534100092607 /* Model */,
 				6CDE26FF2C650CE400092607 /* Util */,
-				CCD6E4702C726F8400FB81F3 /* Login */,
+				CCD6E4702C726F8400FB81F3 /* LoginViewController */,
 				6CDE26FB2C650A9B00092607 /* HomeViewController */,
 				6CDE26CB2C6507BB00092607 /* AppDelegate.swift */,
 				6CDE26CD2C6507BB00092607 /* SceneDelegate.swift */,
@@ -304,14 +304,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		CCD6E4702C726F8400FB81F3 /* Login */ = {
+		CCD6E4702C726F8400FB81F3 /* LoginViewController */ = {
 			isa = PBXGroup;
 			children = (
 				CCD6E4762C7287E000FB81F3 /* ViewModel */,
 				CCD6E4712C726F9900FB81F3 /* LoginScreen */,
 				CCD6E4722C726FD900FB81F3 /* LoginViewController.swift */,
 			);
-			path = Login;
+			path = LoginViewController;
 			sourceTree = "<group>";
 		};
 		CCD6E4712C726F9900FB81F3 /* LoginScreen */ = {
