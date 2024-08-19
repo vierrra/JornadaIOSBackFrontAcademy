@@ -40,7 +40,7 @@ class BaseViewController: UIViewController {
     func showAlertWithCompletion(_ title: String, _ message: String, titleButton: String, completion: @escaping () -> Void) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okButton = UIAlertAction(title: titleButton, style: .default) { _ in
-            self.dismiss(animated: true)
+            completion()
         }
         
         alertController.addAction(okButton)
