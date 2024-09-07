@@ -69,7 +69,7 @@ extension RegisterViewController: UITextFieldDelegate {
 }
 
 extension RegisterViewController: RegisterViewModellProtocol {
-    func sucessRegister() {
+    func successRegister() {
         showAlertWithCompletion("Parabéns", "Casdastro efetudo com sucesso", titleButton: "OK") {
             self.dismiss(animated: true)
         }

@@ -9,7 +9,7 @@ import Foundation
 import FirebaseAuth
 
 protocol RegisterViewModellProtocol: AnyObject {
-    func sucessRegister()
+    func successRegister()
     func errorRegister(_ errorMessage: String)
 }
 
@@ -54,7 +54,7 @@ class RegisterViewModel {
         auth.createUser(withEmail: email, password: password) { [weak self] authResult, error in
             if error == nil {
                 print("Sucesso no cadastro")
-                self?.delegate?.sucessRegister()
+                self?.delegate?.successRegister()
             } else {
                 print("Erro no cadastro, error: \(String(describing: error?.localizedDescription))")
                 self?.delegate?.errorRegister((String(describing: error?.localizedDescription)))

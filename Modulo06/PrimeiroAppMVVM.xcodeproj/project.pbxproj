@@ -25,10 +25,13 @@
 		6CDE26FE2C650AD500092607 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDE26FD2C650AD500092607 /* HomeScreen.swift */; };
 		6CDE27012C650D0700092607 /* UIViewLayoutExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDE27002C650D0700092607 /* UIViewLayoutExtension.swift */; };
 		6CDE27032C650EB500092607 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDE27022C650EB500092607 /* UIColorExtension.swift */; };
-		6CDE27052C65318A00092607 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDE27042C65318900092607 /* HomeViewModel.swift */; };
 		6CDE27092C653C7B00092607 /* StoryCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDE27082C653C7B00092607 /* StoryCardCollectionViewCell.swift */; };
 		6CDE270C2C6547F600092607 /* StoryCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDE270B2C6547F600092607 /* StoryCardViewModel.swift */; };
 		6CDE27112C65536600092607 /* Stories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDE27102C65536600092607 /* Stories.swift */; };
+		CCD00F262C8CDEA9000F4E35 /* HomeData.json in Resources */ = {isa = PBXBuildFile; fileRef = CCD00F252C8CDEA9000F4E35 /* HomeData.json */; };
+		CCD00F292C8CDEE4000F4E35 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD00F282C8CDEE4000F4E35 /* HomeService.swift */; };
+		CCD00F2B2C8CE679000F4E35 /* HomeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD00F2A2C8CE679000F4E35 /* HomeData.swift */; };
+		CCD00F2D2C8CE8CC000F4E35 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD00F2C2C8CE8CC000F4E35 /* HomeViewModel.swift */; };
 		CCD6E4732C726FD900FB81F3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD6E4722C726FD900FB81F3 /* LoginViewController.swift */; };
 		CCD6E4752C726FF900FB81F3 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD6E4742C726FF900FB81F3 /* LoginScreen.swift */; };
 		CCD6E4782C72880B00FB81F3 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD6E4772C72880B00FB81F3 /* LoginViewModel.swift */; };
@@ -79,11 +82,14 @@
 		6CDE26FD2C650AD500092607 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		6CDE27002C650D0700092607 /* UIViewLayoutExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewLayoutExtension.swift; sourceTree = "<group>"; };
 		6CDE27022C650EB500092607 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
-		6CDE27042C65318900092607 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		6CDE27082C653C7B00092607 /* StoryCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCardCollectionViewCell.swift; sourceTree = "<group>"; };
 		6CDE270B2C6547F600092607 /* StoryCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCardViewModel.swift; sourceTree = "<group>"; };
 		6CDE27102C65536600092607 /* Stories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stories.swift; sourceTree = "<group>"; };
 		AF119DB07239F673E05723EF /* Pods-PrimeiroAppMVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrimeiroAppMVVM.release.xcconfig"; path = "Target Support Files/Pods-PrimeiroAppMVVM/Pods-PrimeiroAppMVVM.release.xcconfig"; sourceTree = "<group>"; };
+		CCD00F252C8CDEA9000F4E35 /* HomeData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = HomeData.json; sourceTree = "<group>"; };
+		CCD00F282C8CDEE4000F4E35 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
+		CCD00F2A2C8CE679000F4E35 /* HomeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeData.swift; sourceTree = "<group>"; };
+		CCD00F2C2C8CE8CC000F4E35 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewModel.swift; path = ../../../../../../../Desktop/HomeViewModel.swift; sourceTree = "<group>"; };
 		CCD6E4722C726FD900FB81F3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CCD6E4742C726FF900FB81F3 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		CCD6E4772C72880B00FB81F3 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -196,6 +202,7 @@
 		6CDE26CA2C6507BB00092607 /* PrimeiroAppMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				CCD00F232C8CDE18000F4E35 /* Resources */,
 				6CDE270F2C65534100092607 /* Model */,
 				6CDE26FF2C650CE400092607 /* Util */,
 				CCD6E4702C726F8400FB81F3 /* LoginViewController */,
@@ -231,6 +238,7 @@
 		6CDE26FB2C650A9B00092607 /* HomeViewController */ = {
 			isa = PBXGroup;
 			children = (
+				CCD00F272C8CDECD000F4E35 /* Service */,
 				6CDE27062C653BB200092607 /* Cell */,
 				6CDE270D2C65505100092607 /* ViewModel */,
 				6CDE26FC2C650AAC00092607 /* HomeScreen */,
@@ -260,10 +268,10 @@
 		6CDE27062C653BB200092607 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				6C32B9642C6D2D4200AF26F5 /* PostCollectionViewCell */,
 				6C32B95C2C6D150000AF26F5 /* PostCardCollectionViewCell */,
-				6C32B9562C6BCAEC00AF26F5 /* StoryCollectionViewCell */,
+				6C32B9642C6D2D4200AF26F5 /* PostCollectionViewCell */,
 				6CDE27072C653C1C00092607 /* StoryCardCollectionViewCell */,
+				6C32B9562C6BCAEC00AF26F5 /* StoryCollectionViewCell */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -288,7 +296,7 @@
 		6CDE270D2C65505100092607 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				6CDE27042C65318900092607 /* HomeViewModel.swift */,
+				CCD00F2C2C8CE8CC000F4E35 /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -298,6 +306,7 @@
 			children = (
 				6CDE27102C65536600092607 /* Stories.swift */,
 				6C32B95F2C6D1D7500AF26F5 /* Posts.swift */,
+				CCD00F2A2C8CE679000F4E35 /* HomeData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -309,6 +318,30 @@
 				AF119DB07239F673E05723EF /* Pods-PrimeiroAppMVVM.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		CCD00F232C8CDE18000F4E35 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CCD00F242C8CDE23000F4E35 /* Mock */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CCD00F242C8CDE23000F4E35 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				CCD00F252C8CDEA9000F4E35 /* HomeData.json */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		CCD00F272C8CDECD000F4E35 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				CCD00F282C8CDEE4000F4E35 /* HomeService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		CCD6E4702C726F8400FB81F3 /* LoginViewController */ = {
@@ -469,6 +502,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCD00F262C8CDEA9000F4E35 /* HomeData.json in Resources */,
 				6CDE26D52C6507C300092607 /* Assets.xcassets in Resources */,
 				6CDE26D82C6507C300092607 /* Base in Resources */,
 				CCD6E47C2C72B51800FB81F3 /* GoogleService-Info.plist in Resources */,
@@ -541,15 +575,17 @@
 				6CDE26FE2C650AD500092607 /* HomeScreen.swift in Sources */,
 				6C32B9602C6D1D7500AF26F5 /* Posts.swift in Sources */,
 				6CDE26D02C6507BB00092607 /* HomeViewController.swift in Sources */,
+				CCD00F2D2C8CE8CC000F4E35 /* HomeViewModel.swift in Sources */,
 				6C32B95B2C6BEBC600AF26F5 /* StoryCollectionViewModel.swift in Sources */,
+				CCD00F2B2C8CE679000F4E35 /* HomeData.swift in Sources */,
 				6C32B9662C6D2D7E00AF26F5 /* PostCollectionViewCell.swift in Sources */,
 				CCD6E47A2C728CD600FB81F3 /* BaseViewController.swift in Sources */,
+				CCD00F292C8CDEE4000F4E35 /* HomeService.swift in Sources */,
 				6C32B9582C6BCB1D00AF26F5 /* StoryCollectionViewCell.swift in Sources */,
 				6CDE270C2C6547F600092607 /* StoryCardViewModel.swift in Sources */,
 				6CDE27112C65536600092607 /* Stories.swift in Sources */,
 				CCD6E47F2C72DB3C00FB81F3 /* RegisterViewController.swift in Sources */,
 				6CDE27092C653C7B00092607 /* StoryCardCollectionViewCell.swift in Sources */,
-				6CDE27052C65318A00092607 /* HomeViewModel.swift in Sources */,
 				6CDE26CC2C6507BB00092607 /* AppDelegate.swift in Sources */,
 				CCD6E4752C726FF900FB81F3 /* LoginScreen.swift in Sources */,
 				6CDE26CE2C6507BB00092607 /* SceneDelegate.swift in Sources */,

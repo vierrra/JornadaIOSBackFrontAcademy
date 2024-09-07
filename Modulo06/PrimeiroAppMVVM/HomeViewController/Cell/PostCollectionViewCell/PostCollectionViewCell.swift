@@ -8,7 +8,7 @@ class PostCollectionViewCell: UICollectionViewCell {
     
     lazy var cardView: UIView = {
         let view = UIView()
-        view.backgroundColor = .white
+        view.backgroundColor = .clear
         view.setupShadow()
         view.layer.cornerRadius = 15
         view.clipsToBounds = true
@@ -23,7 +23,7 @@ class PostCollectionViewCell: UICollectionViewCell {
         tap.numberOfTapsRequired = 1
         image.addGestureRecognizer(tap)
         image.isUserInteractionEnabled = true
-        image.isHidden = true
+        image.isHidden = false
         return image
     }()
     
@@ -103,9 +103,9 @@ class PostCollectionViewCell: UICollectionViewCell {
     }
     
     public func setupCell(_ data: Posts) {
-        self.profileImageView.image = UIImage(named: data.profileImage)
+        self.profileImageView.image = UIImage(named: data.profileImage ?? "")
         self.userNameLabel.text = data.userName
-        self.postImageView.image = UIImage(named: data.postImage)
+        self.postImageView.image = UIImage(named: data.postImage ?? "")
     }
     
     private func setup() {

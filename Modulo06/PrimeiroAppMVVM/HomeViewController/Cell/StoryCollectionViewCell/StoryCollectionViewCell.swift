@@ -47,7 +47,7 @@ class StoryCollectionViewCell: UICollectionViewCell {
     }
     
     public func setupCell(_ indexPath: IndexPath, data: Stories) {
-        profileImageView.image = UIImage(named: data.image)
+        profileImageView.image = UIImage(named: data.image ?? "")
         userNameLabel.text = data.userName
         addButton.isHidden = viewModel.hidenButton(indexPath)
     }
