@@ -6,6 +6,7 @@ class HomeViewController: UIViewController {
     
     private var screen: HomeScreen?
     private var homeViewModel: HomeViewModel = HomeViewModel()
+    private let flag: Bool = false
     
     override func loadView() {
         screen = HomeScreen()
@@ -15,15 +16,28 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //homeViewModel.fetchHomeDataMock()
-        homeViewModel.delegate(delegate: self)
-        homeViewModel.fetchHomeDataAlamofire()
+        fetchTypeRequest(flag: flag)
+    }
+    
+    private func fetchTypeRequest(flag: Bool) {
+        if flag {
+            //homeViewModel.fetchHomeDataAlamofire()
+            homeViewModel.fetchHomeDataURLSession()
+            homeViewModel.delegate(delegate: self)
+        } else {
+            homeViewModel.fetchHomeDataMock()
+            screen?.configProtocolsCollection(self, dataSource: self)
+        }
     }
 }
 
 extension HomeViewController: HomeViewModelProtocol {
     func success() {
-        self.screen?.configProtocolsCollection(self, dataSource: self)
+        //Sempre usar " DispatchQueue.main.async" quando utilizarmos URLSession"
+        //Com alamofire não precisamos, pois ele já o utiliza por debaixo dos panos
+        DispatchQueue.main.async {
+            self.screen?.configProtocolsCollection(self, dataSource: self)
+        }
     }
 }
 

@@ -34,4 +34,35 @@ class HomeService {
             }
         }
     }
+    
+    public func getHomeDataURLSession(completion: @escaping (Result<HomeData, Error>) -> Void) {
+        let urlString: String = "https://run.mocky.io/v3/ef04b46e-b395-464e-95bd-7de3dab23413"
+        
+        guard let url = URL(string: urlString) else { return completion(.failure(NSError(domain: "URL inválida", code: 1, userInfo: nil)))}
+        
+        // Aqui, não precisamos especificar o httpMethod, pois como já estamos utilizando o método "dataTask"da classe "URLSession", ele automaticamente
+        // já faz a requisição HTTP do tipo "GET" por padrão.
+        //Porém se precisarmos de outros métodos HTTP, como "POST", "PUT" ou "DELETE", é necessário criar uma instancia de "URLRequest".
+        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+            
+            guard let dataResult = data else { return completion(.failure(NSError(domain: "Error Data", code: 1, userInfo: nil)))}
+            guard let response = response as? HTTPURLResponse else { return }
+            
+            if response.statusCode == 200 {
+                do {
+                    let homeData: HomeData = try JSONDecoder().decode(HomeData.self, from: dataResult)
+                    completion(.success(homeData))
+                } catch {
+                    completion(.failure(error))
+                }
+            } else {
+                if let error = error {
+                    completion(.failure(error))
+                    return
+                }
+            }
+        }
+        
+        task.resume()
+    }
 }
