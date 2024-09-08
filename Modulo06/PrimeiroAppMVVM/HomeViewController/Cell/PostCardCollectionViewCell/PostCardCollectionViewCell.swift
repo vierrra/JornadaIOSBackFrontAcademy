@@ -36,14 +36,14 @@ class PostCardCollectionViewCell: UICollectionViewCell {
     
     private func setup() {
         self.buildViewHierarchy()
-        self.configContraints()
+        self.configConstraints()
     }
     
     private func buildViewHierarchy() {
         contentView.addSubview(collectionView)
     }
     
-    private func configContraints() {
+    private func configConstraints() {
         collectionView.anchor(top: topAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor)
     }
 }

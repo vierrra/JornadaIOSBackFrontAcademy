@@ -23,7 +23,7 @@ class PostCollectionViewCell: UICollectionViewCell {
         tap.numberOfTapsRequired = 1
         image.addGestureRecognizer(tap)
         image.isUserInteractionEnabled = true
-        image.isHidden = false
+        image.isHidden = true
         return image
     }()
     
