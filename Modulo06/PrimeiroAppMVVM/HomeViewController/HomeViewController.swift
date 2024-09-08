@@ -15,9 +15,15 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        screen?.configProtocolsCollection(self, dataSource: self)
         //homeViewModel.fetchHomeDataMock()
+        homeViewModel.delegate(delegate: self)
         homeViewModel.fetchHomeDataAlamofire()
+    }
+}
+
+extension HomeViewController: HomeViewModelProtocol {
+    func success() {
+        self.screen?.configProtocolsCollection(self, dataSource: self)
     }
 }
 
