@@ -16,7 +16,8 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         screen?.configProtocolsCollection(self, dataSource: self)
-        homeViewModel.fetchHomeDataMock()
+        //homeViewModel.fetchHomeDataMock()
+        homeViewModel.fetchHomeDataAlamofire()
     }
 }
 

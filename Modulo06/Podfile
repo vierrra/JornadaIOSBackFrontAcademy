@@ -7,7 +7,7 @@ target 'PrimeiroAppMVVM' do
 
 	pod 'FirebaseAuth'
 	pod 'FirebaseFirestore'
-
+  pod 'Alamofire'
 
 end
 
